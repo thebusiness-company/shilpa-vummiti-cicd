@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Order Success</title>
+</head>
+<body >
+  <h2>Thank you for your order{% if user %}, {{ user.first_name }}{% endif %}!</h2>
+  <p>Your payment has been successfully verified.</p>
+  <p><strong>Order ID:</strong> {{ order.id }}</p>
+  <p><strong>Total:</strong> ₹{{ order.total_amount }}</p>
+  <p><strong>Shipping Address:</strong></p>
+  <p>{{ address.full_name }}<br>
+     {{ address.street_address }}<br>
+     {{ address.city }}, {{ address.state }} - {{ address.postal_code }}<br>
+     {{ address.country }}</p>
+  <p>We’ll notify you when your order is shipped.</p>
+  <p><strong>– Shilpa Vummiti Store</strong></p>
+</body>
+</html>

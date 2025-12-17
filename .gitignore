@@ -1,0 +1,115 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+htmlcov/
+
+# Django stuff:
+# Ignore local database, media and static build outputs
+db.sqlite3
+media/
+staticfiles/
+static/
+*.log
+local_settings.py
+
+# If you use Django migrations in source control, DO NOT ignore migrations/
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pyenv
+.python-version
+
+# Pipenv
+Pipfile.lock
+
+# pyenv-virtualenv
+.pyenv/
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Node / frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+dist/
+build/
+public/build/
+.vite/
+.parcel-cache/
+
+# Environment files
+.env
+.env.*
+
+# Docker
+docker-compose.override.yml
+.docker-compose.override.yml
+docker-compose.*.env
+
+# Misc
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+
