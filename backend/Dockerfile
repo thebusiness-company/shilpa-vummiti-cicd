@@ -4,7 +4,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # ✅ REQUIRED FOR collectstatic
-ENV DJANGO_SECRET_KEY=build-time-secret-key
+ENV SECRET_KEY=build-time-secret-key
 
 WORKDIR /app
 
