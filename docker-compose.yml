@@ -13,7 +13,7 @@ services:
 
   backend:
     build: ./backend
-    command: gunicorn shilpa_vummiti.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn shilpa_vummiti.wsgi:application --bind 0.0.0.0:8008
     env_file:
       - .env
     depends_on:
@@ -23,13 +23,13 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "80:80"
+      - "8081:80"
     depends_on:
       - backend
     restart: unless-stopped
 
   cadvisor:
-    image: gcr.io/google-containers/cadvisor:latest
+    image: gcr.io/cadvisor/cadvisor:v0.49.2 
     container_name: shilpa_vummiti_cadvisor_1
     privileged: true
     volumes:
@@ -37,6 +37,8 @@ services:
       - /var/run:/var/run:ro
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro   # <-- critical for EC2
+      - /cgroup:/cgroup:ro 
     ports:
       - "8080:8080"
     restart: unless-stopped
