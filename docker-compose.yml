@@ -30,6 +30,8 @@ services:
 
   cadvisor:
     image: gcr.io/google-containers/cadvisor:latest
+    container_name: shilpa_vummiti_cadvisor_1
+    privileged: true
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro
